@@ -1,0 +1,12 @@
+use('worldender')
+db.noticias.insertOne({
+    'titulo':'The World Ender Has Come...',
+    'autor':'Lexx Little',
+    'descricao':'Um breve texto apresentando um pouco do World Ender para os novos usuários!',
+    'conteudo':'Seja bem-vindo a inauguração do website World Ender! Aqui você encontrará notícias cômicas, ou não, relacionadas a possíveis eventos que podem ou vão levar ao fim do mundo! Esperamos que se divirta.',
+    'data':'09/12/2023',
+    'capa':'https://i.redd.it/cjtw93jzogj31.jpg'
+})
+
+use('worldender')
+db.noticias.find()

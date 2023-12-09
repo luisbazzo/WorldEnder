@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" style="font-family: 'Poppins', sans-serif;">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>World Ender - Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <link href="style/style.css" type="text/css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+  <body class="vh-100" onload="carregaNoticias()">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand text-danger fs-1" style="font-weight: bold;" href="index.html">WORLD ENDER</a>
+          <!-- Toggle Btn -->
+          <button class="navbar-toggler shadow-none mt-3 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- SideBar -->
+          <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <!-- SideBar Header -->
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu de Ações</h5>
+              <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <!-- SideBar Body -->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+              <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="#news">Notícias</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#about">Sobre</a>
+                  </li>
+              </ul>
+              <!-- Login / Sign up-->
+              <div class="d-flex flex-column justify-content-center flex-lg-row align-items-center gap-3">
+                <a href="login.html" class="text-white text-decoration-none">Entrar</a>
+                <a href="usuario.html" class="text-white text-decoration-none px-3 py-1 bg-danger rounded-4">Cadastrar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="carrousel">
+        <div class="banner-container">
+            <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="images/wall-1.webp" class="d-block w-100" style="height: 60vh;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h1>O fim está mais próximo do que nunca!</h1>
+                      <p>Cheque as nossas últimas notícias para se preparar!</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="images/wall-2.jpg" class="d-block w-100" style="height: 60vh;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h1>Quanto tempo a Terra ainda vai durar?</h1>
+                      <p>Cheque nossas notícias para descobrir quanto tempo temos antes da Terra queimar!</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img src="images/wall-3.jpg" class="d-block w-100" style="height: 60vh;" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h1>Seria o GTA VI um presságio apocalíptico?</h1>
+                      <p>Veja as últimas notícias para descobrir!</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+      </section>
+
+      <section class="news text-white" id="news">
+        <div class="container-xl justify-content-center align-items-center text-center mt-5 mb-5">
+            <h1 style="font-size: 40px; font-weight: bold;">ÚLTIMAS NOTÍCIAS</h1>
+            
+            <div class="dadosCard">
+               
+            </div>
+        </div>
+      </section>
+
+      <section class="about bg-white text-black" id="about">
+        <div class="container pt-5 pb-5 text-center align-items-center justify-content-center">
+            <div class="about-1">
+                <h1 style="font-size: 40px; font-weight: bold;">SOBRE NÓS</h1>
+                <p class="fs-5">Bem-vindo(a) ao World Ender, sua fonte única e inigualável de notícias sobre o possível fim do mundo! Somos mais do que apenas um site de notícias, somos uma experiência única que mistura informações reais e cômicas sobre os eventos que podem moldar o destino do nosso planeta.</p>
+            </div>
+            <div class="about-2">
+                <div class="content-box-lg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="about-item">
+                                    <ion-icon name="airplane"></ion-icon>
+                                    <h3>MISSÃO</h3>
+                                    <hr>
+                                    <p>Na World Ender, nossa missão é informar e entreter, explorando as narrativas em torno de eventos que têm potencial para impactar drasticamente a humanidade. Buscamos proporcionar uma visão única e divertida sobre os desafios que enfrentamos como sociedade.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="about-item">
+                                    <ion-icon name="glasses"></ion-icon>
+                                    <h3>VISÃO</h3>
+                                    <hr>
+                                    <p>Buscamos ser a principal plataforma global que une as notícias sérias e humorísticas sobre eventos apocalípticos, criando uma comunidade de leitores que compartilham nossa paixão por compreender o extraordinário enquanto desfrutam de uma boa risada.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="about-item">
+                                    <ion-icon name="heart-half"></ion-icon>
+                                    <h3>VALORES</h3>
+                                    <hr>
+                                    <p>
+                                        <span>1. Criatividade e Inovação: Abraçamos a criatividade em todas as formas, incentivando uma abordagem inovadora.</span><br><br>
+                                        <span>2. Veracidade: Comprometemo-nos a fornecer notícias precisas e baseadas em fatos, mesmo quando mergulhamos no reino do humor.</span><br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+        <div class="modal fade" id="modalMensagem" tabindex="-1" role="dialog">
+            <div class="modal-dialog bg-danger" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger">Mensagem</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p id="mensagem"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <footer class="bg-danger text-black text-center py-3 fs-5">
+        &copy; 2023 World Ender. Todos os direitos reservados.
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/noticia.js"></script>
+</body>
+</html>

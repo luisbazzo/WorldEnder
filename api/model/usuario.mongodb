@@ -1,0 +1,16 @@
+use('worldender')
+db.usuarios.insertOne({
+    'nome':'Arnold Schwarzenegger',
+    'email': 'arnold9991201@gmail.com',
+    'senha': 'dadada',
+    'ativo': true,
+    'tipo': 'Usuario',
+    'avatar': 'https://ui-avatars.com/api/?name=Arnold+Schwarzenegger&background=F00&color=FF0'
+})
+
+//criando um índice único
+db.usuarios.createIndex({'email':1}, {unique:true})
+
+//exemplo de listagem
+use('worldender')
+db.usuarios.find({},{senha: 0})
