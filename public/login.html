@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" style="font-family: 'Poppins', sans-serif;">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>World Ender - Login</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+        <link href="style/style.css" type="text/css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+  <body class="vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand text-danger fs-1" style="font-weight: bold; margin-left: -50px;" href="index.html">WORLD ENDER</a>
+        <!-- Toggle Btn -->
+        <button class="navbar-toggler shadow-none mt-3 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- SideBar -->
+        <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <!-- SideBar Header -->
+          <div class="offcanvas-header text-white border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu de Ações</h5>
+            <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <!-- SideBar Body -->
+          <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+            <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#news">Notícias</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="#about">Sobre</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="login.html">Criar Notícia</a>
+              </li>
+            </ul>
+            <!-- Login / Sign up-->
+            <div class="d-flex flex-column justify-content-center flex-lg-row align-items-center gap-3">
+              <a href="login.html" class="text-white text-decoration-none">Entrar</a>
+              <a href="usuario.html" class="text-white text-decoration-none px-3 py-1 bg-danger rounded-4">Cadastrar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-white w-100 overflow-hidden" style="min-height: 900px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 mt-5">
+            <div class="card shadow">
+              <div class="card-header text-center">
+                <h2 class="text-sucess">Entre na sua conta!</h2>
+              </div>
+              <!-- SVG-->
+              <div class="d-flex justify-content-center align-items-center mt-4">
+                <object data="images/winner.svg" type="image/svg+xml" class="mt-4" style="width: 50%;"></object>
+              </div>
+            </div>    
+            <div class="card-body mt-4">
+              <form id="loginForm">
+                <div class="mb-2">
+                  <label for="login" class="form-label">E-mail do usuário</label>
+                  <input type="text" class="form-control" id="login" name="login" autofocus autocomplete="email">
+                </div>
+                <div class="mb-2">
+                  <label for="senha" class="form-label">Senha</label>
+                  <input type="password" class="form-control" id="senha" name="senha">
+                </div>
+                <div class="mt-3 text-center">
+                  <button type="submit" class="btn btn-dark fs-5">
+                    <i class="bi bi-file-earmark-lock"></i> Login
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer mt-4" style="color: black;">
+              Ainda não é usuário? <a href="usuario.html">Cadastre-se!</Cadastre-se!></a>
+            </div>
+          </div>
+        </div>
+        <script src="js/login.js"></script>
+      </div> 
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="modalMensagem" tabindex="-1" role="dialog">
+      <div class="modal-dialog bg-danger" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-danger">Mensagem</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <p id="mensagem"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-danger text-black text-center position-fixed fixed-bottom py-3 fs-5">
+        &copy; 2023 World Ender. Todos os direitos reservados.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

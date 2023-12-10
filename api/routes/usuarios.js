@@ -46,7 +46,7 @@ const validaUsuario = [
         .isBoolean().withMessage('O valor deve ser um booleano, true ou false'),
     check('tipo')
         .default('Usuario')
-        .isIn(['Admin', 'Cliente']).withMessage('O tipo do usuário deve ser Admin ou Usuario'),
+        .isIn(['Admin', 'Usuario']).withMessage('O tipo do usuário deve ser Admin ou Usuario'),
     check('avatar')
         .optional({nullable: true}) //permitir usuário sem avatar
         .isURL().withMessage('O endereço do Avatar deve ser uma URL válida')

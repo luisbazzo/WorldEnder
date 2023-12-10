@@ -1,7 +1,8 @@
-//const urlBase = ''
-const urlBase = 'http://localhost:4000/api'
+const urlBase = 'https://worldender.vercel.app/api'
+//const urlBase = 'http://localhost:4000/api'
 const resultadoModal = new bootstrap.Modal(document.getElementById("modalMensagem"))
 const access_token = localStorage.getItem("token") || null
+
 
 //evento submit do formulário
 document.getElementById('formNoticia').addEventListener('submit', function (event) {
@@ -29,10 +30,10 @@ document.getElementById('formNoticia').addEventListener('submit', function (even
             "capa": document.getElementById('capa').value
         }
     }
-    salvaBebida(noticia)
+    salvaNoticia(noticia)
 })
 
-async function salvaBebida(noticia) {    
+async function salvaNoticia(noticia) {    
     if (noticia.hasOwnProperty('_id')) { //Se a notícia tem o id iremos alterar os dados (PUT)
         // Fazer a solicitação PUT para o endpoint das bebidas
         await fetch(`${urlBase}/noticias`, {
@@ -97,60 +98,4 @@ async function salvaBebida(noticia) {
                 resultadoModal.show();
             });
     }
-}
-
-async function carregaNoticias() {
-    const cardNoticias = document.getElementById('dadosCard')
-    // Fazer a solicitação GET para o endpoint das notícias
-    await fetch(`${urlBase}/noticias`, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(noticia => {
-                cardNoticias.innerHTML += `
-                <div class="card" style="width: 18rem;">
-                <img src="${noticia.capa}" style="width: 300px; height: 300px;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">${noticia.titulo}</h5>
-                  <h6 class="card-subtitle mb-2 text-light">Autor: ${noticia.autor}</h6>
-                  <p class="card-text">${noticia.descricao}</p>
-                  <a href="#" class="btn btn-danger">Ler Notícia</a>
-                </div>
-                `
-            })
-        })
-        .catch(error => {
-            document.getElementById("mensagem").innerHTML = `<span class='text-danger'>Erro ao salvar a notícia: ${error.message}</span>`
-            resultadoModal.show();
-        });
-}
-
-async function buscaNoticiaPeloId(id) {
-    await fetch(`${urlBase}/noticias/id/${id}`, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data[0]) { //Iremos pegar os dados e colocar na página.
-                document.getElementById('id').value = data[0]._id
-                document.getElementById('titulo').value = data[0].titulo,
-                document.getElementById('autor').value = data[0].autor,
-                document.getElementById('descricao').value = data[0].descricao,
-                document.getElementById('conteudo').value = data[0].conteudo,
-                document.getElementById('data').value = data[0].data,
-                document.getElementById('capa').value = data[0].capa
-            }
-        })
-        .catch(error => {
-            document.getElementById("mensagem").innerHTML = `<span class='text-danger'>Erro ao salvar a notícia: ${error.message}</span>`
-            resultadoModal.show();
-        });
-
 }

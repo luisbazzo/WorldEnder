@@ -8,9 +8,20 @@ db.usuarios.insertOne({
     'avatar': 'https://ui-avatars.com/api/?name=Arnold+Schwarzenegger&background=F00&color=FF0'
 })
 
+use('worldender')
+db.usuarios.insertOne({
+    'nome':'Teste',
+    'email': 'teste@gmail.com',
+    'senha': 'teste123',
+    'ativo': true,
+    'tipo': 'Usuario',
+    'avatar': 'https://ui-avatars.com/api/?name=Teste&background=F00&color=FF0'
+})
+
 //criando um índice único
+use('worldender')
 db.usuarios.createIndex({'email':1}, {unique:true})
 
 //exemplo de listagem
 use('worldender')
-db.usuarios.find({},{senha: 0})
+db.usuarios.find({},{senha:0})

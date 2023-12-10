@@ -23,21 +23,12 @@ const validaNoticia = [
      .not()
      .isEmpty()
      .trim()
-     .isLength({max:50})
-     .withMessage("É obrigatório informar uma breve descrição da notícia! No máximo 50 caracteres."),
+     .withMessage("É obrigatório informar uma breve descrição da notícia! No máximo 70 caracteres."),
     check("data")
      .not()
      .isEmpty()
      .trim()
-     .withMessage("É obrigatório informar a data da notícia!")
-     .custom((value) => {
-     // Valide o formato da data (dd-MM-yyyy)
-      const regexDate = /^\d{2}-\d{2}-\d{4}$/;
-      if (!regexDate.test(value)) {
-         throw new Error("Formato de data inválido. Use o formato dd-mm-aaaa!");
-      }
-      return true;
-     }),
+     .withMessage("É obrigatório informar a data da notícia!"),
     check("conteudo")
      .not()
      .isEmpty()
