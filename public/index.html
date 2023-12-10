@@ -151,7 +151,7 @@
         </div>
       </section>
 
-      <!-- Modal -->
+    <!-- Modal -->
         <div class="modal fade" id="modalMensagem" tabindex="-1" role="dialog">
             <div class="modal-dialog bg-danger" role="document">
                 <div class="modal-content">
@@ -165,7 +165,33 @@
                 </div>
             </div>
         </div>
-
+      
+    <!-- Modal Notícia -->
+    <div class="modal fade" id="modalNoticia" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-xl bg-danger" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h5 class="modal-title text-danger" id="titulo" style="text-align: center;"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <img id="capa" class="mt-3 mb-4" style="width: 1100px; height: 520px;">
+            <div class="row justify-content-evenly text-center align-items-center">
+              <div class="col text-dark">
+                <h6 id="data"></h6>
+              </div>
+              <div class="col text-dark">
+                <h6 id="autor"></h6>
+              </div>
+            </div> 
+            <p id="descricao" class="text-body-emphasis mt-5"></p>
+            <hr>
+            <p id="conteudo" class="text-black"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <footer class="bg-danger text-black text-center py-3 fs-5">
         &copy; 2023 World Ender. Todos os direitos reservados.
     </footer>
